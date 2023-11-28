@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('interaccion', function (Blueprint $table) {
             $table->id();
-            $table->string('idDogI');
-            $table->string('idDogC');
+            $table->string('idDogInteresado');
+            $table->string('idDogCandidato');
             $table->string('preference');
             $table->timestamps();
         });

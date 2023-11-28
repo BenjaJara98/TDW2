@@ -14,16 +14,12 @@ return new class extends Migration
         Schema::create('perro', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('urlP');
-            $table->string('sexo');
+            $table->string('urlFoto');
             $table->string('description'); 
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('perro');

@@ -21,14 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('/perro')->group(function () use ($router) {
-    $router->post('create', [PerroController::class, 'create']);
-    $router->get('list', [PerroController::class, 'show']);
-    $router->put('update/{id}', [PerroController::class, 'update']);
-    $router->delete('delete/{id}', [PerroController::class, 'destroy']);
+    $router->post('create', [PerroController::class, 'CREATE']);
+    $router->get('get', [PerroController::class, 'GET']);
+    $router->put('update/{id}', [PerroController::class, 'UPDATE']);
+    $router->delete('delete/{id}', [PerroController::class, 'DESTROY']);
 });
 
 Route::prefix('/interaccion')->group(function () use ($router) {
-    $router->post('create', [InteraccionController::class, 'create']);
-    $router->get('list/{id}', [InteraccionController::class, 'listOne']);
-    $router->delete('delete/{id}', [InteraccionController::class, 'destroy']);
+    $router->post('create', [InteraccionController::class, 'CREATE']);
+    $router->get('get/{id}', [InteraccionController::class, 'GET']);
+    $router->delete('delete/{id}', [InteraccionController::class, 'DELETE']);
 });
